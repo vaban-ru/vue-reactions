@@ -1,9 +1,9 @@
 const path = require("path");
 
 module.exports = {
-  title: "Vue Avatar",
-  description: "Simple avatar component for Vue 3",
-  base: "/vue-avatar/",
+  title: "Vue Reactions",
+  description: "Simple reactions component for Vue 3",
+  // base: "/vue-reactions/",
   vite: {
     plugins: [],
     resolve: {
@@ -24,17 +24,11 @@ module.exports = {
           text: "Props",
           collapsible: true,
           items: [
-            { text: "Username", link: "/guide/username" },
-            { text: "Size", link: "/guide/size" },
-            { text: "Border radius", link: "/guide/border-radius" },
-            { text: "Background color", link: "/guide/background-color" },
-            { text: "Color", link: "/guide/color" },
-            { text: "Lighten", link: "/guide/lighten" },
-            { text: "Image", link: "/guide/image" },
+            { text: "Reactions", link: "/guide/props/reactions" },
+            { text: "ModelValue", link: "/guide/props/model-value" },
           ],
         },
       ],
-      "/demo/": [],
     },
   },
 };

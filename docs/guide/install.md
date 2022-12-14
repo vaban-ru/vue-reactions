@@ -5,13 +5,13 @@
 ### Yarn
 
 ```
-yarn add @webzlodimir/vue-avatar
+yarn add @webzlodimir/vue-reactions
 ```
 
 ### Npm 
 
 ```
-npm i @webzlodimir/vue-avatar
+npm i @webzlodimir/vue-reactions
 ```
 
 ## Use
@@ -21,8 +21,8 @@ npm i @webzlodimir/vue-avatar
 Just import component where you want
 
 ```js
-import VueAvatar from "@webzlodimir/vue-avatar";
-import "@webzlodimir/vue-avatar/dist/style.css";
+import VueReactions from "@webzlodimir/vue-reactions";
+import "@webzlodimir/vue-reactions/dist/style.css";
 ```
 
 And use it in `template` tag

@@ -5,57 +5,53 @@
       :key="`reactions-1`"
       :id="1"
       :model-value="selectedReactions"
-      @update:modelValue="updateLocalStorage"
       :reactions="reactions"
-    />
-    <h2>Multiple</h2>
-    <vue-reactions
-      :key="`reactions-2`"
-      :id="2"
+      :storage="storage"
+      has-dropdown
       multiple
-      :model-value="selectedReactionsMultiple"
-      @update:modelValue="updateLocalStorageMultiple"
-      :reactions="reactions"
+      @update:modelValue="updateSelectedReactions"
+      @update:storage="updateStorage"
     />
   </div>
 </template>
 
 <script setup lang="ts">
-import VueReactions, { IReaction } from "./VueReactions.vue";
+import VueReactions, { ISelectedReactionsItem } from "./VueReactions.vue";
 import { ref } from "vue";
 
-const selectedReactions = ref<IReaction[]>(
-  JSON.parse(localStorage.getItem("reactions")) || []
-);
-const selectedReactionsMultiple = ref<IReaction[]>(
-  JSON.parse(localStorage.getItem("reactions-multiple")) || []
-);
 const reactions = ref([
   {
     id: 1,
+    label: "Heart",
+    emoji: "❤️",
+  },
+  {
+    id: 2,
     label: "Cool",
     emoji: "👍",
   },
   {
-    id: 2,
+    id: 3,
     label: "Bad",
     emoji: "👎",
   },
-  {
-    id: 3,
-    label: "Heart",
-    emoji: "❤️",
-  },
 ]);
 
-const updateLocalStorage = (reactions: IReaction[]) => {
-  selectedReactions.value = reactions;
-  localStorage.setItem("reactions", JSON.stringify(reactions));
+const storage = ref<(number | string)[]>(
+  JSON.parse(localStorage.getItem("some-storage")) || []
+);
+
+const updateStorage = (storageArray: (number | string)[]) => {
+  storage.value = storageArray;
+  localStorage.setItem("some-storage", JSON.stringify(storageArray));
 };
 
-const updateLocalStorageMultiple = (reactions: IReaction[]) => {
-  selectedReactionsMultiple.value = reactions;
-  localStorage.setItem("reactions-multiple", JSON.stringify(reactions));
+const selectedReactions = ref<ISelectedReactionsItem[]>(
+  JSON.parse(localStorage.getItem("reactions")) || []
+);
+const updateSelectedReactions = (reactions: ISelectedReactionsItem[]) => {
+  selectedReactions.value = reactions;
+  localStorage.setItem("reactions", JSON.stringify(reactions));
 };
 </script>
 

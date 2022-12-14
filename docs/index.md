@@ -2,8 +2,8 @@
 layout: home
 
 hero:
-    name: Vue Avatar
-    tagline: Simple avatar component for Vue 3
+    name: Vue Reactions
+    tagline: Reactions component for Vue 3
     actions:
        - theme: brand
          text: Get started
