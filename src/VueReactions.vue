@@ -62,10 +62,12 @@ export interface IProps {
   modelValue: ISelectedReactionsItem[];
   storage: (string | number)[];
   multiple?: boolean;
-  hasDropdown: boolean;
-  maxReactions?: number;
+  hasDropdown?: boolean;
 }
 
+/**
+ * Single selected reactions item interface
+ */
 export interface ISelectedReactionsItem {
   id: number | string;
   count: number;
@@ -183,6 +185,9 @@ const toggleReaction = (reaction: IReaction) => {
   emit("update:modelValue", selectedReactions.value);
 };
 
+/**
+ * Computed return already selected reactions
+ */
 const selectedReactionsArray = computed(() => {
   const reactionsArray: IReaction[] = [];
   props.reactions.forEach((reaction) => {
@@ -200,7 +205,7 @@ const selectedReactionsArray = computed(() => {
 <style lang="scss" scoped>
 .vue-reactions {
   position: relative;
-  display: flex;
+  display: inline-flex;
   gap: 8px;
   font-family: Helvetica, Arial, sans-serif;
 
@@ -236,6 +241,7 @@ const selectedReactionsArray = computed(() => {
     bottom: calc(-100% - 8px);
     left: 0;
     padding-top: 8px;
+    z-index: 100;
     &-grid {
       background: #252525;
       border-radius: 16px;

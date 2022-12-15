@@ -47,7 +47,7 @@ interface ISelectedReactionsItem {
   <vue-reactions :model-value="selectedReactions" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 
 const selectedReactions = ref([

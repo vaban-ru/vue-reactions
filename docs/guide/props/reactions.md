@@ -52,7 +52,7 @@ interface IReaction {
   <vue-reactions :reactions="reactions" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 
 const reactions = ref([

@@ -1,22 +1,39 @@
-# Install & Use
+# Demo of single reaction
 
-## Install
+<script setup>
+import VueReactions from '../../../src/VueReactions.vue';
+import { ref } from "vue";
 
-### Yarn
+const reactions = ref([
+  {
+    id: 1,
+    label: "Heart",
+    emoji: "❤️",
+  },
+]);
 
-```
-yarn add @webzlodimir/vue-reactions
-```
+const storage = ref([]);
 
-### Npm 
+const selectedReactions = ref([]);
 
-```
-npm i @webzlodimir/vue-reactions
-```
+const updateStorage = (storageArray) => {
+  storage.value = storageArray;
+};
 
-## Use
+const updateSelectedReactions = (reactions) => {
+  selectedReactions.value = reactions;
+};
+</script>
 
-### Vue 3
+<div style="padding: 32px 0;">
+    <vue-reactions
+        :model-value="selectedReactions"
+        :reactions="reactions"
+        :storage="storage"
+        @update:modelValue="updateSelectedReactions"
+        @update:storage="updateStorage"
+    />
+</div>
 
 ```vue
 <template>

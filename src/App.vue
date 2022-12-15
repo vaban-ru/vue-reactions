@@ -1,9 +1,6 @@
 <template>
   <div>
-    <h2>Single</h2>
     <vue-reactions
-      :key="`reactions-1`"
-      :id="1"
       :model-value="selectedReactions"
       :reactions="reactions"
       :storage="storage"
@@ -34,6 +31,16 @@ const reactions = ref([
     id: 3,
     label: "Bad",
     emoji: "👎",
+  },
+  {
+    id: 4,
+    label: "Bad",
+    emoji: "😊",
+  },
+  {
+    id: 5,
+    label: "Bad",
+    emoji: "😡",
   },
 ]);
 
