@@ -1,5 +1,5 @@
 # Vue Reactions
-![Size](https://img.shields.io/bundlephobia/minzip/@webzlodimir/vvue-reactions)
+![Size](https://img.shields.io/bundlephobia/minzip/@webzlodimir/vue-reactions)
 ![Downloads](https://img.shields.io/npm/dt/@webzlodimir/vue-reactions)
 ![Version](https://img.shields.io/npm/v/@webzlodimir/vue-reactions)
 
