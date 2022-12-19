@@ -3,7 +3,4 @@ export default {
     host: "localhost",
     port: "3003",
   },
-  ssr: {
-    format: "cjs",
-  },
 };

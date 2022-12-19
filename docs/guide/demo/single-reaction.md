@@ -25,15 +25,17 @@ const updateSelectedReactions = (reactions) => {
 };
 </script>
 
-<div style="padding: 32px 0;">
-    <vue-reactions
-        :model-value="selectedReactions"
-        :reactions="reactions"
-        :storage="storage"
-        @update:modelValue="updateSelectedReactions"
-        @update:storage="updateStorage"
-    />
-</div>
+<ClientOnly>
+    <div style="padding: 32px 0;">
+        <vue-reactions
+            :model-value="selectedReactions"
+            :reactions="reactions"
+            :storage="storage"
+            @update:modelValue="updateSelectedReactions"
+            @update:storage="updateStorage"
+        />
+    </div>
+</ClientOnly>
 
 ```vue
 <template>
