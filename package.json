@@ -1,6 +1,7 @@
 {
   "name": "@webzlodimir/vue-reactions",
-  "version": "0.0.2",
+  "description": "❤️Awesome and easy to use reaction component for Vue 3",
+  "version": "0.0.3",
   "private": false,
   "scripts": {
     "build": "rimraf dist && vue-tsc && vite build",
@@ -15,10 +16,14 @@
     "vue",
     "vuejs",
     "component",
-    "avatar"
+    "reactions"
   ],
-  "author": "webzlodimir",
+  "author": "Vladimir Banduristov <hello@webzlodimir.ru> (https://vaban.ru/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vaban-ru/vue-reactions.git"
+  },
   "bugs": {
     "url": "https://github.com/vaban-ru/vue-reactions/issues"
   },
